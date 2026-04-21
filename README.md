@@ -1,74 +1,83 @@
-# StopSec: Real-Time Spectrum Sharing System
+# StopSec: Real-Time Spectrum Sharing System with Interference Control
 
 ## Overview
-This project implements a real-time wireless spectrum sharing system (StopSec) using SDR platforms. It detects and stops interfering users under low-SNR conditions using PHY-layer watermarking and a feedback control loop.
+StopSec is a real-time wireless spectrum sharing system that detects and stops interfering users under low-SNR conditions. The system combines PHY-layer watermarking with a closed-loop feedback mechanism to enable fast and reliable interference mitigation without degrading the communication link.
+
+---
 
 ## My Contribution
-- Designed PHY-layer watermarking and detection algorithms
-- Implemented real-time SDR system using USRP (TX/RX pipelines)
-- Developed interference detection and pseudonym decoding
-- Integrated database-based feedback control loop
-- Conducted over-the-air experiments under real conditions
+- Designed PHY-layer watermarking and pseudonym encoding for interference identification  
+- Implemented real-time SDR-based transmitter and receiver pipelines (USRP + UHD)  
+- Developed low-SNR detection and pseudonym decoding algorithms  
+- Integrated database-driven feedback control for interference mitigation  
+- Conducted over-the-air multi-node experiments under real channel conditions  
+
+---
 
 ## System Architecture
-![System Architecture](System_Model.png)
+
+![System Architecture](system_architecture.png)
 
 ### Workflow
 1. Secondary users (SU) transmit OFDM signals with embedded pseudonyms  
 2. Primary user (PU) detects interference and decodes pseudonym  
 3. PU writes interference report to database  
-4. Secondary users query database and stop transmission if detected
-   
+4. Secondary users query database and stop transmission if detected  
+
+---
 ## Experimental Setup
 
-The system was deployed in a real-world wireless testbed environment using multiple SDR nodes.
+![Experimental Setup](implementation_setup.png)
 
-![Experimental Setup](Implementation_Setup.png)
+- Multi-node deployment with multiple secondary users (SU1, SU2, SU3)  
+- Primary user (PU) monitors interference in real time  
+- Distributed SDR nodes deployed across a real wireless environment  
+- Experiments conducted under realistic channel conditions (multipath, interference)  
 
-### Setup Details
-- Multiple secondary users (SU1, SU2, SU3) transmitting over the air  
-- Primary user (PU) receiving and detecting interference  
-- Distributed deployment across different physical locations  
-- Real wireless channel conditions with multipath and interference  
-## Technical Highlights
-- OFDM-based waveform with subcarrier watermarking
-- Correlation-based detection and synchronization
-- Low-SNR signal detection
-- Real-time SDR streaming and buffering
+---
 
-## Tools
-- Python
-- USRP (SDR)
-- UHD API
-- GNU Radio (if used)
-
-## Key Results
-- Interference stopping latency:
-  - < 270 ms at SNR ≥ −8 dB
-  - < 650 ms at −10 dB SNR
-- Reliable detection below noise floor
-- No degradation to communication link
+## Results
 
 ### Pseudonym Detection Performance
+![Detection Performance](pseudonym_detection.png)
 
-![Detection Performance](packet_detection.png)
+- Reliable detection down to very low SNR (≈ −10 dB)  
+- Graceful degradation with multiple interfering users  
 
-- Reliable detection even at low SNR conditions
-- Performance degrades gracefully under multiple interfering users
+---
 
 ### Interference Mitigation Latency vs Bandwidth
-
 ![Latency vs Bandwidth](latency_bandwidth.png)
 
-- Faster stopping with higher bandwidth configurations
-- Trade-off between packet duration and system response time
+- Faster response with higher bandwidth configurations  
+- Demonstrates trade-off between packet duration and system latency  
 
-### Interference Mitigation with Multiple Users
+---
 
+### Multiple Interfering Users
 ![Multiple Users](multiple_su.png)
 
-- System successfully detects and stops multiple interfering users
-- Increased number of users slightly increases stopping time
+- System successfully detects and stops multiple interfering users  
+- Increased number of users leads to moderate increase in stopping time  
+
+---
+
+## Technical Highlights
+- OFDM-based waveform with subcarrier-level watermarking  
+- Correlation-based synchronization and detection  
+- Low-SNR signal detection and decoding  
+- Real-time SDR streaming and buffer management  
+- Hardware-in-the-loop validation with USRP platforms  
+
+---
+
+## Tools & Platforms
+- Python  
+- UHD API  
+- USRP (X310 / B210)  
+- GNU Radio (for SDR integration)  
+
+---
   
 ## Reproducibility
 Instructions below.
