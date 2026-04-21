@@ -1,4 +1,4 @@
-# StopSec: Real-Time Spectrum Sharing System with Interference Control
+# StopSec: Real-Time Interference Management for Spectrum Sharing
 
 ## Overview
 StopSec is a real-time wireless spectrum sharing system that detects and stops interfering users under low-SNR conditions. The system combines PHY-layer watermarking with a closed-loop feedback mechanism to enable fast and reliable interference mitigation without degrading the communication link.
