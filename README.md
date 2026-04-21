@@ -27,7 +27,7 @@ StopSec is a real-time wireless spectrum sharing system that detects and stops i
 ---
 ## Experimental Setup
 
-![Experimental Setup](implementation_setup.png)
+![Experimental Setup](Implementation_Setup.png)
 
 - Multi-node deployment with multiple secondary users (SU1, SU2, SU3)  
 - Primary user (PU) monitors interference in real time  
