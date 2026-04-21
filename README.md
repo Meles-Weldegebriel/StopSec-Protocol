@@ -109,7 +109,7 @@ git clone https://github.com/Meles-Weldegebriel/StopSec-Protocol.git
 Run the following command on each node to move to the directory that contains the StopSec files.
 
   ```
-cd StopSec-System
+cd StopSec-Protocol
   ```
 
 **4) Run Experiments**
@@ -133,7 +133,7 @@ python3 Watermark_RealTime_RX.py -f 3383e6 -r 5e6 -g 30
 ```
 python3 Watermark_RealTime_TX.py -f 3383e6 -r 5e6 -g 20 --start_time 6:30
 ```
-6) Record values evaluate the StopSec system. 
+6) Record values evaluate the StopSec Protocol. 
 
 7) If you have any questions, please reach out to me at Meles99@gmail.com 
 
