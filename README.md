@@ -10,13 +10,6 @@ This project implements a real-time wireless spectrum sharing system (StopSec) u
 - Integrated database-based feedback control loop
 - Conducted over-the-air experiments under real conditions
 
-## Key Results
-- Interference stopping latency:
-  - < 270 ms at SNR ≥ −8 dB
-  - < 650 ms at −10 dB SNR
-- Reliable detection below noise floor
-- No degradation to communication link
-
 ## System Architecture
 ![System Architecture](System_Model.png)
 
@@ -49,6 +42,34 @@ The system was deployed in a real-world wireless testbed environment using multi
 - UHD API
 - GNU Radio (if used)
 
+## Key Results
+- Interference stopping latency:
+  - < 270 ms at SNR ≥ −8 dB
+  - < 650 ms at −10 dB SNR
+- Reliable detection below noise floor
+- No degradation to communication link
+
+### Pseudonym Detection Performance
+
+![Detection Performance](pseudonym_detection.png)
+
+- Reliable detection even at low SNR conditions
+- Performance degrades gracefully under multiple interfering users
+
+### Interference Mitigation Latency vs Bandwidth
+
+![Latency vs Bandwidth](latency_bandwidth.png)
+
+- Faster stopping with higher bandwidth configurations
+- Trade-off between packet duration and system response time
+
+### Interference Mitigation with Multiple Users
+
+![Multiple Users](multiple_su.png)
+
+- System successfully detects and stops multiple interfering users
+- Increased number of users slightly increases stopping time
+  
 ## Reproducibility
 Instructions below.
 
