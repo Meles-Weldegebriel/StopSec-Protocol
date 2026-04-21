@@ -51,7 +51,7 @@ The system was deployed in a real-world wireless testbed environment using multi
 
 ### Pseudonym Detection Performance
 
-![Detection Performance](pseudonym_detection.png)
+![Detection Performance](packet_detection.png)
 
 - Reliable detection even at low SNR conditions
 - Performance degrades gracefully under multiple interfering users
