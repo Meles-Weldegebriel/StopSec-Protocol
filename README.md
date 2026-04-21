@@ -18,7 +18,7 @@ This project implements a real-time wireless spectrum sharing system (StopSec) u
 - No degradation to communication link
 
 ## System Architecture
-![System Architecture](system_architecture.png)
+![System Architecture](System_Model.png)
 
 ### Workflow
 1. Secondary users (SU) transmit OFDM signals with embedded pseudonyms  
