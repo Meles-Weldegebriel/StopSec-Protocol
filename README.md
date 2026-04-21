@@ -1,12 +1,42 @@
-# StopSec-Protocol
-This repository is for full implementation of the StopSec protocol.
+# StopSec: Real-Time Spectrum Sharing System
 
-StopSec is a wireless protocol designed for cooperative spectrum sharing, enabling primary users to reactively stop interference from secondary users.
+## Overview
+This project implements a real-time wireless spectrum sharing system (StopSec) using SDR platforms. It detects and stops interfering users under low-SNR conditions using PHY-layer watermarking and a feedback control loop.
+
+## My Contribution
+- Designed PHY-layer watermarking and detection algorithms
+- Implemented real-time SDR system using USRP (TX/RX pipelines)
+- Developed interference detection and pseudonym decoding
+- Integrated database-based feedback control loop
+- Conducted over-the-air experiments under real conditions
+
+## Key Results
+- Interference stopping latency:
+  - < 270 ms at SNR ≥ −8 dB
+  - < 650 ms at −10 dB SNR
+- Reliable detection below noise floor
+- No degradation to communication link
+
+## System Architecture
+(You will add diagram here later)
+
+## Technical Highlights
+- OFDM-based waveform with subcarrier watermarking
+- Correlation-based detection and synchronization
+- Low-SNR signal detection
+- Real-time SDR streaming and buffering
+
+## Tools
+- Python
+- USRP (SDR)
+- UHD API
+- GNU Radio (if used)
+
+## Reproducibility
+Instructions below.
 
 This profile is intended for doing any experiment using StopSec. 
 This experiment uses rooftop SDR nodes (USRP X310) and compute nodes from the Emulab cluster. 
-
-Instructions:
 
 **1) Instantiate this profile with appropriate parameters**
 
