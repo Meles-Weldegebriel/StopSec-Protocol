@@ -18,7 +18,13 @@ This project implements a real-time wireless spectrum sharing system (StopSec) u
 - No degradation to communication link
 
 ## System Architecture
-(You will add diagram here later)
+![System Architecture](system_architecture.png)
+
+### Workflow
+1. Secondary users (SU) transmit OFDM signals with embedded pseudonyms  
+2. Primary user (PU) detects interference and decodes pseudonym  
+3. PU writes interference report to database  
+4. Secondary users query database and stop transmission if detected  
 
 ## Technical Highlights
 - OFDM-based waveform with subcarrier watermarking
