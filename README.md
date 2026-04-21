@@ -24,8 +24,19 @@ This project implements a real-time wireless spectrum sharing system (StopSec) u
 1. Secondary users (SU) transmit OFDM signals with embedded pseudonyms  
 2. Primary user (PU) detects interference and decodes pseudonym  
 3. PU writes interference report to database  
-4. Secondary users query database and stop transmission if detected  
+4. Secondary users query database and stop transmission if detected
+   
+## Experimental Setup
 
+The system was deployed in a real-world wireless testbed environment using multiple SDR nodes.
+
+![Experimental Setup](Implementation_Setup.png)
+
+### Setup Details
+- Multiple secondary users (SU1, SU2, SU3) transmitting over the air  
+- Primary user (PU) receiving and detecting interference  
+- Distributed deployment across different physical locations  
+- Real wireless channel conditions with multipath and interference  
 ## Technical Highlights
 - OFDM-based waveform with subcarrier watermarking
 - Correlation-based detection and synchronization
