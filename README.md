@@ -104,7 +104,7 @@ Once you have these parameters selected, click through the rest of the profile a
 **3) Cloning StopSec to Each Node**
 Run the following command on each node to clone StopSec repository to your nodes. 
   ```
-git clone [https://github.com/StopSec/StopSec-System.git](https://github.com/Meles-Weldegebriel/StopSec-Protocol.git)
+git clone https://github.com/Meles-Weldegebriel/StopSec-Protocol.git
   ```
 Run the following command on each node to move to the directory that contains the StopSec files.
 
